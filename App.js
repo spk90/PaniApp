@@ -1,32 +1,40 @@
-// StartScreen.js
+import { StatusBar } from 'expo-status-bar';
+import { StyleSheet, Text, View } from 'react-native';
 
-
-import React, { useEffect } from "react";
-import {  View, Image } from "react-native";
-import { useNavigation } from "@react-navigation/native";
-
-const StartingScreen = () => {
-  const navigation = useNavigation();
-
-  useEffect(() => {
-    // Simulate a delay (e.g., 3 seconds) before navigating to the login screen
-    const timeout = setTimeout(() => {
-      navigation.navigate("login"); // Replace with the name of your login screen
-    }, 3000);
-
-    // Cleanup the timeout to avoid memory leaks
-    return () => clearTimeout(timeout);
-  }, [navigation]);
-
+export default function App() {
   return (
-    <View style={{backgroundColor:"white", justifyContent:"center", flex:1}}>
-        <Image
-          source={require("./pani.png")} 
-          style={{ width: 450, mixBlendMode: 'color-burn',Color:"red"}}
-        />
-      </View>
+    <View style={styles.container}>
+      <Text>Open up App.js to start working on your app!</Text>
+      <StatusBar style="auto" />
+    </View>
   );
-};
+}
 
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    backgroundColor: '#fff',
+    alignItems: 'center',
+    justifyContent: 'center',
+  },
+});
+import { StatusBar } from 'expo-status-bar';
+import { StyleSheet, Text, View } from 'react-native';
 
-export default StartingScreen;
+export default function App() {
+  return (
+    <View style={styles.container}>
+      <Text>Open up App.js to start working on your app!</Text>
+      <StatusBar style="auto" />
+    </View>
+  );
+}
+
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    backgroundColor: '#fff',
+    alignItems: 'center',
+    justifyContent: 'center',
+  },
+});
